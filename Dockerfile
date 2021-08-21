@@ -4,8 +4,6 @@ LABEL maintainer="shoothzj@gmail.com"
 
 WORKDIR /opt/sh
 
-COPY source /opt/sh
-
 RUN wget http://nginx.org/download/nginx-1.21.1.tar.gz && \
 mkdir nginx && \
 tar -xf nginx-1.21.1.tar.gz -C nginx --strip-components 1 && \
