@@ -11,8 +11,8 @@ rm -rf nginx-1.21.4.tar.gz && \
 mkdir ~/.vim && \
 cp -r nginx/contrib/vim/* ~/.vim/ && \
 cd  /opt/sh/nginx && \
-dnf install -y gcc pcre-devel make zlib-devel  && \
-./configure && \
+dnf install -y gcc pcre-devel make zlib-devel openssl-devel && \
+./configure --with-http_ssl_module && \
 make && \
 make install && \
 dnf clean all && \
